@@ -39,8 +39,9 @@ class ApplicationController < Sinatra::Base
 
   post "/login" do
     ##your code here
+    binding.pry 
     user = User.find_by(:username => params[:username])
-binding.pry 
+binding.pry
   end
 
   get "/failure" do
