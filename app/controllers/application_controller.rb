@@ -41,14 +41,13 @@ class ApplicationController < Sinatra::Base
 
   get "/logout" do
     session.clear
-    binding.pry
-    
     redirect "/"
   end
 
   helpers do
     def logged_in?
       !!session[:user_id]
+      binding.pry
     end
 
     def current_user
